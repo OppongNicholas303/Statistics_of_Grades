@@ -56,8 +56,8 @@ public class Main {
         System.out.println(maxStats);
 
 
-        for (int i= 0; i < maxStats; i++){
-            System.out.print(i + "> ");
+        for (int i= maxStats-1; i >= 0; i--){
+            System.out.print(i+1 + ">  ");
             for (int stat : stats){
                 if(stat > i){
                     System.out.print("#######   ");
@@ -68,6 +68,9 @@ public class Main {
             }
             System.out.println();
         }
+
+        System.out.println("  +---------+---------+---------+---------+---------+");
+        System.out.println("      0-20     21-40     41-60     61-80     80-100 ");
 
 
 

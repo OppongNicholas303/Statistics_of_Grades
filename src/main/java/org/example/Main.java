@@ -46,34 +46,31 @@ public class Main {
             }
         }
 
-        System.out.println(Arrays.toString(stats));
+        //System.out.println(Arrays.toString(stats));
+        BarChat barChat = new BarChat();
+        barChat.getGraph();
 
         int maxStats = stats[0];
         for(int x : stats){
             maxStats = Math.max(maxStats, x);
         }
 
-        System.out.println(maxStats);
 
-
-        for (int i= maxStats-1; i >= 0; i--){
-            System.out.print(i+1 + ">  ");
-            for (int stat : stats){
-                if(stat > i){
-                    System.out.print("#######   ");
-                }else {
-                    System.out.print("          ");
-                }
-
-            }
-            System.out.println();
-        }
-
-        System.out.println("  +---------+---------+---------+---------+---------+");
-        System.out.println("      0-20     21-40     41-60     61-80     80-100 ");
-
-
-
+//        for (int i= maxStats-1; i >= 0; i--){
+//            System.out.print(i+1 + ">  ");
+//            for (int stat : stats){
+//                if(stat > i){
+//                    System.out.print("#######   ");
+//                }else {
+//                    System.out.print("          ");
+//                }
+//
+//            }
+//            System.out.println();
+//        }
+//
+//        System.out.println("  +---------+---------+---------+---------+---------+");
+//        System.out.println("      0-20     21-40     41-60     61-80     80-100 ");
 
     }
 }

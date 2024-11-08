@@ -1,15 +1,15 @@
 package org.example;
 
 public class GradeComputation {
-    private double [] grades;
+    private final double [] scores;
 
     public GradeComputation(double[] grades) {
-        this.grades = grades;
+        this.scores = grades;
     }
 
     public double getAverage(){
         double totalAverage = 0;
-        for(double grade: grades){
+        for(double grade: scores){
             totalAverage+= grade;
         }
         return  totalAverage/2;
@@ -19,28 +19,19 @@ public class GradeComputation {
     public  double getMaxGrade(){
         double maxGrade =0;
 
-//        for (int i =0; i<Math.ceil(grades.length/2.0); i++){
-//            double check = Math.max(grades[i], grades[(grades.length - 1) -i]);
-//            maxGrade = check > maxGrade ? check : maxGrade;
-//        }
-
-        for (double grade : grades){
-            maxGrade = maxGrade > grade ? maxGrade : grade;
+        for (double grade : scores){
+            maxGrade = Math.max(maxGrade, grade);
         }
 
         return  maxGrade;
     }
 
     public double getMinGrade(){
-        double minGrade =grades[0];
+        double minGrade = scores[0];
 
-//        for (int i =0; i<Math.ceil(grades.length/2.0); i++){
-//            double check = Math.min(grades[i], grades[(grades.length - 1) -i]);
-//            minGrade = check > minGrade ? check : minGrade;
-//        }
 
-        for (double grade : grades){
-            minGrade = minGrade < grade ? minGrade : grade;
+        for (double grade : scores){
+            minGrade = Math.min(minGrade, grade);
         }
 
         return  minGrade;

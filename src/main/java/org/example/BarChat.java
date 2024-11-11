@@ -9,6 +9,7 @@ public class BarChat {
     }
 
     private static int [] scoresStats(){
+
         int [] stats = new int[5];
 
         for (double score : scores) {

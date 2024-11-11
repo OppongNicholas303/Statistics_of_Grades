@@ -12,7 +12,7 @@ public class GradeComputation {
         for(double grade: scores){
             totalAverage+= grade;
         }
-        return  totalAverage/2;
+        return  totalAverage/scores.length;
     }
 
 
